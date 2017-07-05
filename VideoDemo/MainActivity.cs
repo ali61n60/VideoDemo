@@ -23,6 +23,7 @@ namespace VideoDemo
             _videoView = FindViewById<VideoView>(Resource.Id.videoView1);
             Uri uri = Uri.Parse("android.resource://" + PackageName + "/" +
                                 Resource.Raw.video);
+            //can use online video file also
             _videoView.SetVideoURI(uri);
             MediaController mediaController=new MediaController(this);
             mediaController.SetAnchorView(_videoView);
