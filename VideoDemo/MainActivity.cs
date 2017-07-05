@@ -24,6 +24,9 @@ namespace VideoDemo
             Uri uri = Uri.Parse("android.resource://" + PackageName + "/" +
                                 Resource.Raw.video);
             _videoView.SetVideoURI(uri);
+            MediaController mediaController=new MediaController(this);
+            mediaController.SetAnchorView(_videoView);
+            _videoView.SetMediaController(mediaController);
             _videoView.Start();
         }
     }
